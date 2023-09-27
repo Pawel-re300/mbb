@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.7) 100%); /* Tło w stylu kosmicznym */
+}
+
+.mbank-logo {
+    width: 170px;
+    height: 68px;
+    text-align: center;
+    perspective: 1000px; /* Perspektywa dla efektu 3D */
+}
+
+h1 {
+    font-size: 36px;
+    color: transparent; /* Tekst jest przezroczysty */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(to right, #ffd700, #ffbf00); /* Gradient tła */
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: colorChange 2s ease infinite alternate; /* Animacja zmiany koloru tekstu */
+    transform: rotateY(360deg); /* Efekt obracania w osi Y */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Cień */
+    position: relative;
+}
+
+.letter {
+    font-size: 48px;
+    color: #ffd700; /* Złoty kolor litery "M" */
+    animation: moveLetter 2s ease infinite alternate; /* Animacja przesuwania litery "M" */
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ffd700;
+    }
+    100% {
+        color: #ffbf00;
+    }
+}
+
+@keyframes moveLetter {
+    0% {
+        transform: translateX(-10px); /* Początkowe przesunięcie litery "M" */
+    }
+    100% {
+        transform: translateX(10px); /* Końcowe przesunięcie litery "M" */
+    }
+}
